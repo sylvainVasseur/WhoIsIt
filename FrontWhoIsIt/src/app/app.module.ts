@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AccueilComponent } from './components/accueil/accueil.component';
+import { GameComponent } from './components/game/game.component';
+import { ReglesComponent } from './components/regles/regles.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    AccueilComponent,
+    GameComponent,
+    ReglesComponent
   ],
   imports: [
     BrowserModule,
