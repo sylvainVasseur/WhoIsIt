@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { GameComponent } from './components/game/game.component';
 import { ReglesComponent } from './components/regles/regles.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { ReglesComponent } from './components/regles/regles.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
