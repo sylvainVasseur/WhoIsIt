@@ -1,15 +1,15 @@
 export class ListeQuestionsReponses {
 
     id: string;
-    Question: string;
-    Reponse: boolean;
-    Asked: boolean;
+    question: string;
+    reponse: boolean;
+    asked: boolean;
 
     constructor(){
         this.id ="";
-        this.Question = "";
-        this.Reponse = false;
-        this.Asked = false;
+        this.question = "";
+        this.reponse = false;
+        this.asked = false;
 
     }
 
