@@ -1,7 +1,11 @@
-﻿namespace BackWhoIsIt.Models
+﻿using MongoDB.Bson.Serialization.Attributes;
+
+namespace BackWhoIsIt.Models
 {
     public class Personnage
     {
+        [BsonId]
+        [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public string Id { get; set; }
         public string Genre { get; set; }
         public string Espece { get; set; }
