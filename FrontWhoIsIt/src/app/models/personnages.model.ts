@@ -2,23 +2,25 @@ export class Personnages {
 
     id: string;
     genre: string;
+    prenom: string;
     espece: string;
-    couleuryeux: string;
-    couleurcheveux: string;
-    haslunette: boolean;
+    couleurYeux: string;
+    couleurCheveux: string;
+    hasLunette: boolean;
     hasChapeau: boolean;
-    iswizard: boolean;
-    urlphoto: string;
+    isWizard: boolean;
+    urlPhoto: string;
 
     constructor(){
         this.id = "";
         this.genre = "";
+        this.prenom ="";
         this.espece = "";
-        this.couleuryeux = "";
-        this.couleurcheveux = "";
-        this.haslunette = false;
+        this.couleurYeux = "";
+        this.couleurCheveux = "";
+        this.hasLunette = false;
         this.hasChapeau = false;
-        this.iswizard = false;
-        this.urlphoto ="";
+        this.isWizard = false;
+        this.urlPhoto ="";
     }
 }

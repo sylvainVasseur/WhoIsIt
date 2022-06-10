@@ -10,6 +10,6 @@ export class ListeQuestionsReponsesService {
 
   constructor(private http: HttpClient) { }
   getListeQuestionsReponses() : Observable<ListeQuestionsReponses[]>{
-    return this.http.get<ListeQuestionsReponses[]>("https://localhost:7142/api/questionreponse");
+    return this.http.get<ListeQuestionsReponses[]>("https://localhost:44303/allQuestionReponses");
   }
 }

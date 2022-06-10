@@ -15,10 +15,17 @@ export class GameComponent implements OnInit {
   listPersonnage : Array<Personnages> = [];
   listQuestion :  Array<ListeQuestionsReponses> = [];
   nbQuestion : number = 0;
+  NumeroPersonnageAI!: number;
 
   constructor(private http: HttpClient, private router: Router, private service: PersonnageService,) { }
 
   ngOnInit(): void {
+
+    this.service.getPersonnages().subscribe(data =>{
+      this.listPersonnage = data;
+      console.log(this.listPersonnage[0]);
+    });
+    console.log("numero personnage : " + this.NumeroPersonnageAI);
   }
 
 }

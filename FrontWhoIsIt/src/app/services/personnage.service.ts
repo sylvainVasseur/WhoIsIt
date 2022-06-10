@@ -11,9 +11,9 @@ export class PersonnageService {
   constructor(private http: HttpClient) { }
 
   getPersonnages() : Observable<Personnages[]>{
-    return this.http.get<Personnages[]>("https://localhost:7142/api/Personnage");
+    return this.http.get<Personnages[]>("https://localhost:44303/allPersonnages");
   }
   getPersonnagesByID(id: string) : Observable<Personnages>{
-    return this.http.get<Personnages>(`https://localhost:7142/api/Personnage/${id}`);
+    return this.http.get<Personnages>(`https://localhost:44303/Personnageid/${id}`);
   }
 }
