@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Jeux } from 'src/app/models/jeux';
 import { ListeQuestionsReponses } from 'src/app/models/liste-questions-reponses.model';
 import { Personnages } from 'src/app/models/personnages.model';
+import { JeuxService } from 'src/app/services/jeux.service';
 import { ListeQuestionsReponsesService } from 'src/app/services/liste-questions-reponses.service';
 import { PersonnageService } from 'src/app/services/personnage.service';
 
@@ -17,8 +19,15 @@ export class GameComponent implements OnInit {
   listQuestion :  Array<ListeQuestionsReponses> = [];
   nbQuestion : number = 0;
   NumeroPersonnageAI!: number;
+  jeux: Jeux = new Jeux;
 
-  constructor(private http: HttpClient, private router: Router, private service: PersonnageService, private serviceListeQuestions: ListeQuestionsReponsesService) { }
+  constructor(
+    private http: HttpClient, 
+    private router: Router, 
+    private service: PersonnageService, 
+    private serviceListeQuestions: ListeQuestionsReponsesService,
+    private serviceJeux: JeuxService
+    ) { }
 
   ngOnInit(): void {
 
@@ -30,6 +39,10 @@ export class GameComponent implements OnInit {
 
     this.serviceListeQuestions.getListeQuestionsReponses().subscribe(data =>{
       this.listQuestion = data;
+    })
+
+    this.serviceJeux.getDebutJeu().subscribe(data => {
+      this.jeux = data;
     })
   }
 
