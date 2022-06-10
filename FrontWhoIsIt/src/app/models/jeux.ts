@@ -1,11 +1,13 @@
-import { ListeQuestionsReponses } from "./liste-questions-reponses.model";
+
+import { ListeQuestionsReponsesDTO } from "./questionsReponsesDTO";
 
 export class Jeux{
-    idSelectedPersonnage: string;
-    questionsReponses: ListeQuestionsReponses[];
+    selectedPersoId: string;
+    questionsReponses: ListeQuestionsReponsesDTO[];
+
 
     constructor(){
-        this.idSelectedPersonnage = "";
+        this.selectedPersoId = "";
         this.questionsReponses = [];
     }
 }

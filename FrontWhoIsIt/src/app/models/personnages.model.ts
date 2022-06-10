@@ -9,6 +9,7 @@ export class Personnages {
     hasLunette: boolean;
     hasChapeau: boolean;
     isWizard: boolean;
+    visible: boolean;
     urlPhoto: string;
 
     constructor(){
@@ -21,6 +22,7 @@ export class Personnages {
         this.hasLunette = false;
         this.hasChapeau = false;
         this.isWizard = false;
+        this.visible = true;
         this.urlPhoto ="";
     }
 }
