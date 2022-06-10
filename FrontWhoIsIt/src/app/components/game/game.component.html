@@ -1,1 +1,12 @@
-<div class="grid"></div>
+<div class="container">
+    <div class="d-flex flex-row bg-warning m-2" *ngFor="let personnage of listPersonnage">
+        <div class="card text-center">
+            <img [src]="personnage.urlPhoto" class="card-img-top" style="width: 300px; height: 30;">
+            <div class="card-body align-center">
+                <h5 class="card-title">{{personnage.prenom}}</h5>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
