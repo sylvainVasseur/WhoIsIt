@@ -1,15 +1,28 @@
 <div class="container">
-    <div class="d-flex flex-row bg-warning m-2" *ngFor="let personnage of listPersonnage">
-        <div class="card text-center">
-            <img [src]="personnage.urlPhoto" class="card-img-top" >
-            <div class="card-body align-center">
-                <h5 class="card-title">{{personnage.prenom}}</h5>
+    <div *ngIf="gagner">
+        Vous avez gagner !!!
+    </div>
+    <div class="questions"> 
+        <div class="d-flex flex-row bg-warning m-2" *ngFor="let question of listQuestion">
+            <div *ngIf="!question.asked">
+                <button type="button" class="btn btn-warning" (click)="selectedQuestion(question.id)">{{question.question}}</button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="containerPhotos">
+        <div *ngFor="let personnage of listPersonnage" >
+            <div class="card text-center" (click)="selectedPersonnage(personnage.id)">
+                <img [src]="personnage.urlPhoto" class="card-img-top" >
+                <div class="card-body align-center">
+                    <h5 class="card-title">{{personnage.prenom}}</h5>
+                </div>
             </div>
         </div>
     </div>
+    
 </div>
-<div class="push"> 
-    <div class="d-flex flex-row bg-warning m-2" *ngFor="let question of listQuestion">
-        <button type="button" class="btn btn-warning">{{question.question}}</button>
-    </div>
-</div>
+
+
+
+
