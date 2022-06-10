@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 
 // Add services to the container.
 builder.Services.AddSingleton<IPersonnageService, PersonnageService>();
-builder.Services.AddSingleton<QuestionReponseService>();
+builder.Services.AddSingleton<IQuestionReponseService, QuestionReponseService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

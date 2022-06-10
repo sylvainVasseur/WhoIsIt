@@ -7,8 +7,11 @@ namespace BackWhoIsIt.Models
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public string Id { get; set; }
+        [BsonElement("question")]
         public string Question { get; set; }
-        public bool Reponse { get; set; }
+        [BsonElement("reponse")]
+        public string Reponse { get; set; }
+        [BsonElement("asked")]
         public bool Asked { get; set; }
     }
 }
