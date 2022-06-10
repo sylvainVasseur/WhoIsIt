@@ -15,10 +15,26 @@ export class GameComponent implements OnInit {
   listPersonnage : Array<Personnages> = [];
   listQuestion :  Array<ListeQuestionsReponses> = [];
   nbQuestion : number = 0;
+  NumeroPersonnageAI: number = 0;
 
   constructor(private http: HttpClient, private router: Router, private service: PersonnageService,) { }
 
   ngOnInit(): void {
+
+    this.service.getPersonnages().subscribe(data =>{
+      this.listPersonnage = data;
+      console.log(this.listPersonnage[0]);
+    });
+  }
+
+  PotterAIChoixPersonnage(){
+    this.NumeroPersonnageAI = this.RandomNumber(0,this.listPersonnage.length);
+    console.log("numero personnage : " + this.NumeroPersonnageAI);
+    
+  }
+
+  RandomNumber(min: number, max: number){
+    return Math.floor(Math.random() * (max - min + 1)) +min;
   }
 
 }
