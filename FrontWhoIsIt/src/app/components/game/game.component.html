@@ -4,9 +4,12 @@
             <img [src]="personnage.urlPhoto" class="card-img-top" >
             <div class="card-body align-center">
                 <h5 class="card-title">{{personnage.prenom}}</h5>
-
-                
             </div>
         </div>
+    </div>
+</div>
+<div class="push"> 
+    <div class="d-flex flex-row bg-warning m-2" *ngFor="let question of listQuestion">
+        <button type="button" class="btn btn-warning">{{question.question}}</button>
     </div>
 </div>
